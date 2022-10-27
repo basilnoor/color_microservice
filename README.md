@@ -10,6 +10,8 @@ In order to request data from the microservice you will need to make a POST requ
   - must also include the rgb decimal code
   
   example call using axios in react:
-  > await axios.post('http://localhost:4000/', {
+```
+  await axios.post('http://localhost:4000/', {
       rgb,
     });
+```
