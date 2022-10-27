@@ -1,5 +1,5 @@
 # Communication Contract
-> The microservice is not hosted so it must be ran locally on your machine alongside the web interface.
+> The microservice is not hosted so it must be ran locally on your machine simutaneously with the web interface.
 Microservice runs on localhost:4000
 
 <h3> How to REQUEST data from microservice </h3>
@@ -11,7 +11,7 @@ In order to request data from the microservice you will need to make a POST requ
   - the POST request must be made to http://localhost:4000/
   - must also include the rgb decimal code
   
-  example call using axios in react:
+Example call using axios in react:
 ```
   const RequestData = async (event) => {
     await axios.post('http://localhost:4000/', {
@@ -20,4 +20,25 @@ In order to request data from the microservice you will need to make a POST requ
   };
 ```
 
-Once you have requested data the rgb decimal code that you provide will be converted to its hex code value and stored within the microservice
+Once you have made the request to the microservice the rgb decimal code that you provide will be converted to its hex code 
+value and stored within the microservice. 
+
+<h3> How to RECIEVE data from microservice </h3>
+
+In order to recieve data from the microservice you will make a GET request to localhost 4000.
+This will retrieve all the hex codes stored in the microservice in an array.
+
+- the GET request must be made to http://localhost:4000/
+
+Example call using axios in react:
+```
+    const fetchHex = async () => {
+        const res = await axios.get('http://localhost:4000/')
+
+        var storeData = res.data
+    };
+```
+
+You can then display the hexcodes however you like.
+
+<h3> UML sequence diagram </h3>
