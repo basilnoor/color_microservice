@@ -10,4 +10,4 @@ In order to request data from the microservice you will need to make a POST requ
   - must also include the rgb decimal code
   
   example call:
-  > hi
+  >>> hi
