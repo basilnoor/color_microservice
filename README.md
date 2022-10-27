@@ -29,7 +29,7 @@ value and stored within the microservice.
 In order to recieve data from the microservice you will make a GET request to localhost 4000.
 This will retrieve all the hex codes stored in the microservice in an array.
 
-- the GET request must be made to http://localhost:4000/
+- The GET request must be made to http://localhost:4000/
 
 Example call using axios in react:
 ```
