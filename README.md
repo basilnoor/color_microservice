@@ -1,7 +1,7 @@
 # Communication Contract
 
-<h3> How to REQUEST data from microservice <h3>
-  
+<h3> How to REQUEST data from microservice </h3>
+
 In order to request data from the microservice you will need to make a POST request to the 
   local host that the microservice is running on and make sure to include the users input for the
   rgb decimal code.
