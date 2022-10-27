@@ -1,3 +1,3 @@
 # Communication Contract
 
-<h2> How to REQUEST data from microservice <h2>
+<h3> How to REQUEST data from microservice <h3>
