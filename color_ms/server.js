@@ -47,12 +47,12 @@ function rgbToHex() {
 };
 
 // RGB to hex code color conversion. Request to GET RGB code from front end
-app.get('/color', (req, res) => {
+app.get('/', (req, res) => {
     res.send(hex)
 });
 
 // RGB to hex code color conversion. Request to POST hex code to front end
-app.post('/color', (req, res) => {
+app.post('/', (req, res) => {
     const { rgb } = req.body
 
     color.push(rgb)
