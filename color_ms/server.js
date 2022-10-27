@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     const { rgb } = req.body
 
+    // convert to hex
     color.push(rgb)
     rgbToHex()
 
