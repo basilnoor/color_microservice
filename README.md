@@ -11,7 +11,7 @@ In order to request data from the microservice you will need to make a POST requ
   
   example call using axios in react:
 ```
-  const onSubmit = *async* (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     await axios.post('http://localhost:4000/', {
       rgb,
