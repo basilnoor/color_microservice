@@ -8,8 +8,9 @@ In order to request data from the microservice you will need to make a POST requ
   local host that the microservice is running on and make sure to include the users input for the
   rgb decimal code.
   
-  - the POST request must be made to http://localhost:4000/
-  - must also include the rgb decimal code
+  - The POST request must be made to http://localhost:4000/
+  - Make sure to include a body to the call that includes the RGB decimal code value formt he user
+    - The RGB decimal code should be proper notation with separation using *','* ex user input '234,234,234'
   
 Example call using axios in react:
 ```
