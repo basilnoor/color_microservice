@@ -1,4 +1,6 @@
 # Communication Contract
+> The microservice is not hosted so it must be ran locally on your machine alongside the web interface.
+Microservice runs on localhost:4000
 
 <h3> How to REQUEST data from microservice </h3>
 
@@ -17,3 +19,5 @@ In order to request data from the microservice you will need to make a POST requ
     });
   };
 ```
+
+Once you have requested data the rgb decimal code that you provide will be converted to its hex code value and stored within the microservice
