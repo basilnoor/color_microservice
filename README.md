@@ -41,5 +41,5 @@ Example call using axios in react:
 
 You can then display the hexcodes however you like.
 
-<h2> UML sequence diagram </h2>
+<h2> UML Sequence Diagram </h2>
 <img src="https://user-images.githubusercontent.com/51865580/198276788-fe4080e4-d5da-4571-984d-02987eefd410.png" width="600" height="300"/>
