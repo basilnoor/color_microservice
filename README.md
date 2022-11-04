@@ -5,7 +5,7 @@ Microservice runs on localhost:4000
 <h2> How to Setup the Microservice </h2>
 
   1. Clone the repo onto your local machine
-  2. Navigate to the folder and in the console and run >'npm install'
+  2. Navigate to the folder and in the console and run ```'npm install'```
   3. Microservice can now be utilized.
   4. Microservice runs on LocalHost:4000
 
