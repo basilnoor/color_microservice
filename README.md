@@ -2,6 +2,12 @@
 > The microservice is not hosted so it must be ran locally on your machine simutaneously with the web interface.
 Microservice runs on localhost:4000
 
+<h2> How to Setup the Microservice </h2>
+1. Clone the repo onto your local machine
+2. Navigate to the folder and in the console and run `'npm install'`
+3. Microservice can now be utilized.
+4. Microservice runs on LocalHost:4000
+
 <h2> How to REQUEST data from microservice </h2>
 
 In order to request data from the microservice you will need to make a POST request to the 
