@@ -2,16 +2,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require('cors');
-
-
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
 // object to store data
-var color = [];
-var hex = [];
+var hex = '';
 
 // iterate through all hexes and convert each rgb code to hex value
 function decToHex(value) {
@@ -25,9 +21,9 @@ function decToHex(value) {
 };
 
 // iterate through all hexes stored and convert each rgb code to hex value
-function rgbToHex() {
+function rgbToHex(rgb) {
     // split r,g,b into an array seperating by each by ,
-    var rgbSplit = color[0].split(',')
+    var rgbSplit = rgb.split(',')
 
     // assigning variables to r g and b
     var r = rgbSplit[0]
@@ -42,24 +38,17 @@ function rgbToHex() {
     // pass each int variable and convert to hexcode and return
     var hexFinal = '#' + decToHex(r) + decToHex(g) + decToHex(b)
     // push to hex and clear color array
-    hex.push(hexFinal)
-    color.pop()
+    hex = hexFinal
 };
 
 // RGB to hex code color conversion. Request to GET RGB code from front end
 app.get('/', (req, res) => {
+    console.log('Get request made to microservice...')
+    const { rgb } = req.query
+    rgbToHex(rgb)
+    console.log('converting rgb to hex...')
     res.send(hex)
-});
-
-// RGB to hex code color conversion. Request to POST hex code to front end
-app.post('/', (req, res) => {
-    const { rgb } = req.body
-
-    // convert to hex
-    color.push(rgb)
-    rgbToHex()
-
-    res.status(201).send(rgb)
+    console.log(`Returning Hex: ${hex}`)
 });
 
 // microservice runs on port 4000

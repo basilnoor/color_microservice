@@ -2,27 +2,23 @@ import './App.css';
 //imports for microservice
 import React, { useState } from 'react';
 import axios from 'axios';
-import ColorMS from './ColorMS';
-// packages needed for web: axios
 
 function App() {
   // Needed for microservice
   const [rgb, setRgb] = useState('');
-  // to make post request to send user input to microservice
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    await axios.post('http://localhost:4000/', {
-      rgb,
-    });
-    // reset rgb value in user input
-    setRgb('')
+  const [hex, setHex] = useState('');
+  // Get request
+  const fetchHex = async (event) => {
+    event.preventDefault()
+    const res = await axios.get(`http://localhost:4000?rgb=${rgb}`)
+    setHex(res.data)
   };
 
   return (
     <div className="App">
       <header>Testing color micro service</header>
       <div>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={fetchHex}>
           <div>
             <label>RGBcode</label>
             <input value={rgb} onChange={(e) => setRgb(e.target.value)} />
@@ -31,7 +27,7 @@ function App() {
         </form>
       </div>
       <div>
-        <ColorMS />
+        <p>The hex code is: {hex}</p>
       </div>
     </div>
   );
